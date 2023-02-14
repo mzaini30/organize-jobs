@@ -36,6 +36,6 @@
 
 <style>
   .latar {
-    background-image: url("latar.jpg");
+    background-image: url("../latar.jpg");
   }
 </style>
