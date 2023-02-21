@@ -35,7 +35,7 @@
   <div class="flex justify-center">
     <a
       class="bg-green-500 rounded shadow px-4 py-2 mt-2 text-white text-sm"
-      href="https://chat.whatsapp.com/HFVW22P2dpeKOMBJFpSqUd">Join Community</a
+      href="https://zenzen.web.id/komunitas">Join Community</a
     >
   </div>
 </div>

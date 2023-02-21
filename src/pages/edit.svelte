@@ -9,6 +9,11 @@
   }
 
   function simpan() {
+    textarea = textarea
+      .split("\n")
+      .filter((item) => item !== "")
+      .sort()
+      .join("\n");
     localStorage.setItem("jobsTeks", textarea);
 
     let jadiArray = textarea.split("\n").filter((item) => item !== "");
