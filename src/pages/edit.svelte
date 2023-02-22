@@ -18,6 +18,15 @@
 
     let jadiArray = textarea.split("\n").filter((item) => item !== "");
     jadiArray = acak(jadiArray);
+    // jika length array kurang dari 7, maka isi array akan disalin sehingga terisi 7
+    if (jadiArray.length < 7) {
+      let jadiArray2 = [];
+      for (let i = 0; i < 7; i++) {
+        jadiArray2.push(jadiArray[i % jadiArray.length]);
+      }
+      jadiArray = jadiArray2;
+    }
+
     // array dibagi rata ke 7 kelompok
     let jadiArray2 = [];
     for (let i = 0; i < 7; i++) {
