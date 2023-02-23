@@ -1,6 +1,6 @@
 {
-  "name": "Hello World",
-  "description": "This is for testing",
+  "name": "Organize Jobs",
+  "description": "Tools untuk mempermudah pengerjaan jobs yang banyak",
   "version": "0.0.1",
   "manifest_version": 3,
   "action": {
