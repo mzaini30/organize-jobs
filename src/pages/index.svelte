@@ -11,7 +11,7 @@
 
 <div class="w-full min-h-screen p-2 latar">
   <div class="border rounded bg-white p-2 shadow">
-    {#if data && data.length > 0}
+    {#if data && data.length > 0 && data[0] + data[1] != 0}
       <div class="pb-2 flex justify-between">
         <div class="font-bold uppercase ">Must be done TODAY</div>
         <a class="text-gray-500 underline" href="#/edit">edit</a>
@@ -19,9 +19,11 @@
       <div>
         <ol class="list-decimal ml-5">
           {#each data as item}
-            <li>
-              {item}
-            </li>
+            {#if item != null}
+              <li>
+                {item}
+              </li>
+            {/if}
           {/each}
         </ol>
       </div>
