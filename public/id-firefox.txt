@@ -1,0 +1,6 @@
+"browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "91.1.0",
+      "id": "muhzaini30@gmail.com"
+    }
+  }
