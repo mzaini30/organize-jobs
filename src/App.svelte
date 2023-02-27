@@ -12,9 +12,8 @@
     word-wrap: break-word;
   }
   /* chrome extension */
-  :global(body) {
+  /* :global(body) {
     width: 350px;
-    /* height: 500px; */
     font-size: 16px;
-  }
+  } */
 </style>

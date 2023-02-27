@@ -36,7 +36,7 @@
     textarea = textarea
       .split("\n")
       .filter((item) => item !== "")
-      .sort()
+      .sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1))
       .join("\n");
     localStorage.setItem("jobsTeks", textarea);
 
@@ -93,6 +93,6 @@ third task"
 
 <style>
   .latar {
-    background-image: url("../latar.jpg");
+    background-image: url("latar.jpg");
   }
 </style>
