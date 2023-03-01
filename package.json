@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:android": "vite build --mode android --base /assets/ && node script/after-build.js",
+    "build:online": "vite build --mode online",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -15,6 +16,8 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
+    "@stylify/unplugin": "^0.5.27",
+    "@unocss/reset": "^0.50.2",
     "@vitejs/plugin-legacy": "^2.1.0",
     "andro": "^2.2.9",
     "autoprefixer": "^10.4.13",
@@ -23,6 +26,7 @@
     "kunci": "^1.5.2",
     "postcss": "^8.4.21",
     "postcss-load-config": "^4.0.1",
+    "stylify-colors": "^0.0.1",
     "svelte-preprocess": "^5.0.1",
     "svelte-spa-router": "^3.3.0",
     "tailwindcss": "^3.2.4",

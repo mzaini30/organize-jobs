@@ -1,6 +1,7 @@
 <script>
   import { acak } from "kumpulan-tools";
   import { push } from "svelte-spa-router";
+  import gambar from "../gambar/latar.jpg";
 
   let textarea;
 
@@ -33,11 +34,14 @@
   }
 
   function simpan() {
-    textarea = textarea
-      .split("\n")
+    let arrayTextarea = textarea.split("\n");
+    arrayTextarea = [...new Set(arrayTextarea)];
+
+    arrayTextarea = arrayTextarea
       .filter((item) => item !== "")
-      .sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1))
-      .join("\n");
+      .sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));
+
+    textarea = arrayTextarea.join("\n");
     localStorage.setItem("jobsTeks", textarea);
 
     let jadiArray = textarea.split("\n");
@@ -67,8 +71,19 @@
   }
 </script>
 
-<div class="p-2 latar w-full min-h-screen">
-  <div class="rounded mb-2 shadow text-sm p-2 bg-yellow-200 ">
+<img
+  src={gambar}
+  class="position:fixed top:0 left:0 width:100% height:100% z-index:-1 object-fit:cover"
+  alt=""
+/>
+<div
+  class="
+padding:10px width:100% min-height:100vh"
+>
+  <div
+    class="
+  border-radius:5px margin-bottom:10px box-shadow:0_1px_3px_0_$gray500 font-size:13px padding:10px background:$yellow200"
+  >
     Add * in the end of job if it's important.<br /> Example: do homework*
   </div>
   <form action="" on:submit|preventDefault={simpan}>
@@ -76,7 +91,8 @@
       bind:value={textarea}
       name=""
       id=""
-      class="w-full shadow rounded bg-white p-2"
+      class="
+      width:100% box-shadow:0_1px_3px_0_$gray500 border-radius:5px background:white padding:5px"
       cols="30"
       rows="10"
       placeholder="first task
@@ -86,13 +102,14 @@ third task"
     <input
       type="submit"
       value="Save"
-      class="bg-green-500 rounded shadow mt-2 px-4 py-2 text-white cursor-pointer select-none"
+      class="
+      background:$green500 border-radius:5px box-shadow:0_1px_3px_0_$gray500 margin-top:10px padding:5px_10px color:white cursor:pointer user-select:none"
     />
   </form>
 </div>
 
-<style>
+<!-- <style>
   .latar {
     background-image: url("latar.jpg");
   }
-</style>
+</style> -->

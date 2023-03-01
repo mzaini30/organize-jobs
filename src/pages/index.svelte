@@ -1,4 +1,5 @@
 <script>
+  import gambar from "../gambar/latar.jpg";
   let data;
 
   //   hari ini dalam bentuk angka
@@ -9,15 +10,26 @@
   }
 </script>
 
-<div class="w-full min-h-screen p-2 latar">
-  <div class="border rounded bg-white p-2 shadow">
+<div class="width:100% min-height:100vh padding:10px ">
+  <img
+    src={gambar}
+    class="position:fixed top:0 left:0 width:100% height:100% z-index:-1 object-fit:cover"
+    alt=""
+  />
+  <div
+    class="border:1px_solid_gray border-radius:5px background:white padding:10px box-shadow:0_1px_3px_0_gray"
+  >
     {#if data && data.length > 0 && data[0] + data[1] != 0}
-      <div class="pb-2 flex justify-between">
-        <div class="font-bold uppercase ">Must be done TODAY</div>
-        <a class="text-gray-500 underline" href="#/edit">edit</a>
+      <div
+        class="padding-bottom:10px display:flex justify-content:space-between"
+      >
+        <div class="font-weight:bold text-transform:uppercase">
+          Must be done TODAY
+        </div>
+        <a class="text-decoration:underline" href="#/edit">edit</a>
       </div>
       <div>
-        <ol class="list-decimal ml-5">
+        <ol class="list-style:decimal margin-left:20px">
           {#each data as item}
             {#if item != null}
               <li>
@@ -28,22 +40,22 @@
         </ol>
       </div>
     {:else}
-      <div class="flex justify-between">
+      <div class="display:flex justify-content:space-between">
         <div class="">Nothing to do</div>
-        <a class="text-gray-500 underline" href="#/edit">edit</a>
+        <a class="color:gray text-decoration:underline" href="#/edit">edit</a>
       </div>
     {/if}
   </div>
-  <div class="flex justify-center">
+  <div class="display:flex justify-content:center margin-top:10px">
     <a
-      class="bg-green-500 rounded shadow px-4 py-2 mt-2 text-white text-sm"
+      class="background:$green500 border-radius:5px color:white padding:5px_10px font-size:12px box-shadow:0_1px_3px_0_$gray500"
       href="https://zenzen.web.id/komunitas">Join Community</a
     >
   </div>
 </div>
 
-<style>
+<!-- <style>
   .latar {
     background-image: url("../latar.jpg");
   }
-</style>
+</style> -->
