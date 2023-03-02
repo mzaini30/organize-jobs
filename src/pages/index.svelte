@@ -10,26 +10,16 @@
   }
 </script>
 
-<div class="width:100% min-height:100vh padding:10px ">
-  <img
-    src={gambar}
-    class="position:fixed top:0 left:0 width:100% height:100% z-index:-1 object-fit:cover"
-    alt=""
-  />
-  <div
-    class="border:1px_solid_gray border-radius:5px background:white padding:10px box-shadow:0_1px_3px_0_gray"
-  >
+<div class=" luar">
+  <img src={gambar} class=" gambarLatar" alt="" />
+  <div class=" atasnyaWadah">
     {#if data && data.length > 0 && data[0] + data[1] != 0}
-      <div
-        class="padding-bottom:10px display:flex justify-content:space-between"
-      >
-        <div class="font-weight:bold text-transform:uppercase">
-          Must be done TODAY
-        </div>
-        <a class="text-decoration:underline" href="#/edit">edit</a>
+      <div class="wadah">
+        <div class="mustBeDone">Must be done TODAY</div>
+        <a class="tombolEditJuga" href="#/edit">edit</a>
       </div>
       <div>
-        <ol class="list-style:decimal margin-left:20px">
+        <ol class="listnya">
           {#each data as item}
             {#if item != null}
               <li>
@@ -40,22 +30,76 @@
         </ol>
       </div>
     {:else}
-      <div class="display:flex justify-content:space-between">
+      <div class="atasnyaTombolEdit ">
         <div class="">Nothing to do</div>
-        <a class="color:gray text-decoration:underline" href="#/edit">edit</a>
+        <a class="tombolEdit " href="#/edit">edit</a>
       </div>
     {/if}
   </div>
-  <div class="display:flex justify-content:center margin-top:10px">
-    <a
-      class="background:$green500 border-radius:5px color:white padding:5px_10px font-size:12px box-shadow:0_1px_3px_0_$gray500"
-      href="https://zenzen.web.id/komunitas">Join Community</a
+  <div class="atasnyaJoinCommunity ">
+    <a class="joinCommunity " href="https://zenzen.web.id/komunitas"
+      >Join Community</a
     >
   </div>
 </div>
 
-<!-- <style>
-  .latar {
-    background-image: url("../latar.jpg");
+<style>
+  .luar {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
   }
-</style> -->
+  .gambarLatar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  .atasnyaWadah {
+    border: 1px solid var(--gray-300);
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 1px 3px 0 var(--gray-300);
+  }
+  .wadah {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mustBeDone {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .tombolEditJuga {
+    text-decoration: underline;
+  }
+  .listnya {
+    list-style: decimal;
+    margin-left: 20px;
+  }
+  .atasnyaTombolEdit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tombolEdit {
+    color: gray;
+    text-decoration: underline;
+  }
+  .atasnyaJoinCommunity {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .joinCommunity {
+    background: var(--green-500);
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    box-shadow: 0 1px 3px 0 var(--gray-500);
+  }
+</style>
