@@ -14,8 +14,7 @@
     box-sizing: border-box;
   }
   /* chrome extension */
-  /* :global(body) {
+  :global(body) {
     width: 350px;
-    font-size: 16px;
-  } */
+  }
 </style>

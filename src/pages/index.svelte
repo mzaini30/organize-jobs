@@ -1,12 +1,27 @@
 <script>
   import gambar from "../gambar/latar.jpg";
+  import pengolahan from "../lib/pengolahan";
+
   let data;
 
   //   hari ini dalam bentuk angka
   let hariIni = new Date().getDay();
 
-  if (localStorage.jobs) {
-    data = JSON.parse(localStorage.jobs)[hariIni];
+  function cekData() {
+    if (localStorage.jobs) {
+      data = JSON.parse(localStorage.jobs)[hariIni];
+    }
+  }
+  cekData();
+
+  function hapus(teks) {
+    let jobsTeks = localStorage.jobsTeks
+      .split("\n")
+      .filter((item) => item !== teks)
+      .join("\n");
+    localStorage.jobsTeks = jobsTeks;
+    pengolahan(jobsTeks);
+    cekData();
   }
 </script>
 
@@ -22,7 +37,10 @@
         <ol class="listnya">
           {#each data as item}
             {#if item != null}
-              <li>
+              <li
+                class="hover:underline cursor-pointer select-none"
+                on:click={() => hapus(item)}
+              >
                 {item}
               </li>
             {/if}
