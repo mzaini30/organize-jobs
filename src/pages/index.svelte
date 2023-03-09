@@ -27,6 +27,9 @@
 
 <div class=" luar">
   <img src={gambar} class=" gambarLatar" alt="" />
+  <div class="w-full bg-yellow-100 rounded p-2 mb-2 text-sm text-yellow-700">
+    Click an item to remove it
+  </div>
   <div class=" atasnyaWadah">
     {#if data && data.length > 0 && data[0] + data[1] != 0}
       <div class="wadah">
