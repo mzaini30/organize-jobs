@@ -57,11 +57,11 @@
       </div>
     {/if}
   </div>
-  <div class="atasnyaJoinCommunity ">
+  <!-- <div class="atasnyaJoinCommunity ">
     <a class="joinCommunity " href="https://zenzen.web.id/komunitas"
       >Join Community</a
     >
-  </div>
+  </div> -->
 </div>
 
 <style>
