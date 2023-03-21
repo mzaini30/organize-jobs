@@ -1,6 +1,7 @@
 <script>
   import gambar from "../gambar/latar.jpg";
   import pengolahan from "../lib/pengolahan";
+  import iklan from "../gambar/your_ad_here_banner.jpg";
 
   let data;
 
@@ -17,7 +18,14 @@
   function hapus(teks) {
     let jobsTeks = localStorage.jobsTeks
       .split("\n")
-      .filter((item) => item !== teks)
+      // .filter((item) => item !== teks)
+      .filter((item) => {
+        if (!teks.endsWith("!")) {
+          return item !== teks;
+        } else {
+          return item;
+        }
+      })
       .join("\n");
     localStorage.jobsTeks = jobsTeks;
     pengolahan(jobsTeks);
@@ -57,11 +65,9 @@
       </div>
     {/if}
   </div>
-  <!-- <div class="atasnyaJoinCommunity ">
-    <a class="joinCommunity " href="https://zenzen.web.id/komunitas"
-      >Join Community</a
-    >
-  </div> -->
+  <a class="mt-3 block" href="https://wa.me/6281545143654"
+    ><img src={iklan} alt="" /></a
+  >
 </div>
 
 <style>
