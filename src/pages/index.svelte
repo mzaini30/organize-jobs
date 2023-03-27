@@ -2,6 +2,7 @@
   import gambar from "../gambar/latar.jpg";
   import pengolahan from "../lib/pengolahan";
   import iklan from "../gambar/your_ad_here_banner.jpg";
+  import confetti from "canvas-confetti";
 
   let data;
 
@@ -10,12 +11,15 @@
 
   function cekData() {
     if (localStorage.jobs) {
-      data = JSON.parse(localStorage.jobs)[hariIni];
+      data = JSON.parse(localStorage.jobs)
+        [hariIni].filter((x) => x)
+        .sort();
     }
   }
   cekData();
 
   function hapus(teks) {
+    // confetti();
     let jobsTeks = localStorage.jobsTeks
       .split("\n")
       // .filter((item) => item !== teks)
@@ -28,8 +32,14 @@
       })
       .join("\n");
     localStorage.jobsTeks = jobsTeks;
-    pengolahan(jobsTeks);
-    cekData();
+    // Kalau pakai function pengolahan, nanti dia akan teracak semuanya. Kan pengennya itu, jumlahnya adalah jumlah sebelumnya pada hari ini, dikurangi dengan 1
+    // pengolahan(jobsTeks);
+    // cekData();
+    data = data.filter((item) => item !== teks);
+
+    let semua_json = JSON.parse(localStorage.jobs);
+    semua_json[hariIni] = data;
+    localStorage.jobs = JSON.stringify(semua_json);
   }
 </script>
 
@@ -116,17 +126,17 @@
     color: gray;
     text-decoration: underline;
   }
-  .atasnyaJoinCommunity {
+  /* .atasnyaJoinCommunity {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  }
-  .joinCommunity {
+  } */
+  /* .joinCommunity {
     background: var(--green-500);
     border-radius: 5px;
     color: white;
     padding: 5px 10px;
     font-size: 12px;
     box-shadow: 0 1px 3px 0 var(--gray-500);
-  }
+  } */
 </style>
