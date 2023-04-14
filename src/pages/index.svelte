@@ -69,15 +69,22 @@
         </ol>
       </div>
     {:else}
-      <div class="atasnyaTombolEdit ">
+      <div class="atasnyaTombolEdit">
         <div class="">Nothing to do</div>
-        <a class="tombolEdit " href="#/edit">edit</a>
+        <a class="tombolEdit" href="#/edit">edit</a>
       </div>
     {/if}
   </div>
-  <a class="mt-3 block" href="https://wa.me/6281545143654"
+  <div class="py-3 flex justify-center">
+    <a
+      class="text-sm mx-auto border-2 rounded border-black p-2 inline-block font-bold"
+      href="https://chat.whatsapp.com/GVG7JV7OBNhBvP5tWm0wZW"
+      target="_blank">Join Community</a
+    >
+  </div>
+  <!-- <a class="mt-3 block" href="https://wa.me/6281545143654"
     ><img src={iklan} alt="" /></a
-  >
+  > -->
 </div>
 
 <style>

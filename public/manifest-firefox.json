@@ -1,0 +1,19 @@
+{
+    "name": "Organize Jobs",
+    "description": "Tools untuk mempermudah pengerjaan jobs yang banyak",
+    "version": "2.1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html"
+    },
+    "icons": {
+      "128": "./CarbonAssetConfirm.svg"
+    },
+    "browser_specific_settings": {
+      "gecko": {
+        "strict_min_version": "91.1.0",
+        "id": "muhzaini30@gmail.com"
+      }
+    }
+  }
+  
