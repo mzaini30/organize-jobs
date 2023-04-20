@@ -71,13 +71,13 @@
     {:else}
       <div class="atasnyaTombolEdit">
         <div class="">Nothing to do</div>
-        <a class="tombolEdit" href="#/edit">edit</a>
+        <a class="tombolEdit select-none" href="#/edit">edit</a>
       </div>
     {/if}
   </div>
   <div class="py-3 flex justify-center">
     <a
-      class="text-sm mx-auto border-2 rounded border-black p-2 inline-block font-bold"
+      class="text-sm select-none mx-auto border-2 rounded border-black p-2 inline-block font-bold"
       href="https://chat.whatsapp.com/GVG7JV7OBNhBvP5tWm0wZW"
       target="_blank">Join Community</a
     >
