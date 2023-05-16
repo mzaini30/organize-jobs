@@ -97,8 +97,8 @@ third task"
     /* padding:10px width:100% min-height:100vh */
     /* setelah dikasih titik koma: */
     padding: 10px;
-    width: 100%;
-    min-height: 100vh;
+    /* width: 100%;
+    min-height: 100vh; */
   }
   .simpan {
     /* background:$green500 border-radius:5px box-shadow:0_1px_3px_0_$gray500 margin-top:10px padding:5px_10px color:white cursor:pointer user-select:none */

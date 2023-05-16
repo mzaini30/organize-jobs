@@ -75,13 +75,13 @@
       </div>
     {/if}
   </div>
-  <div class="py-3 flex justify-center">
+  <!-- <div class="py-3 flex justify-center">
     <a
       class="text-sm select-none mx-auto border-2 rounded border-black p-2 inline-block font-bold"
       href="https://chat.whatsapp.com/GVG7JV7OBNhBvP5tWm0wZW"
       target="_blank">Join Community</a
     >
-  </div>
+  </div> -->
   <!-- <a class="mt-3 block" href="https://wa.me/6281545143654"
     ><img src={iklan} alt="" /></a
   > -->
@@ -89,8 +89,8 @@
 
 <style>
   .luar {
-    width: 100%;
-    min-height: 100vh;
+    /* width: 100%;
+    min-height: 100vh; */
     padding: 10px;
   }
   .gambarLatar {

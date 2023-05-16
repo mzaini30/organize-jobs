@@ -5,6 +5,10 @@
   import "@unocss/reset/tailwind.css";
   import "warna-tailwind/warna.css";
   import "./App.css";
+  import Wa from "./komponen/wa.svelte";
 </script>
 
-<Router {routes} />
+<div class="mb-14">
+  <Router {routes} />
+  <Wa />
+</div>
