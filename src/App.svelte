@@ -6,6 +6,7 @@
   import "warna-tailwind/warna.css";
   import "./App.css";
   import Wa from "./komponen/wa.svelte";
+  import Iklan from 'iklan-shopee'
 
   let html_iklan = "";
 
@@ -26,5 +27,5 @@
 
 <div class="">
   <Router {routes} />
-  {@html html_iklan}
+  <Iklan></Iklan>
 </div>

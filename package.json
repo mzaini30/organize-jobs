@@ -21,6 +21,7 @@
     "andro": "^2.2.9",
     "canvas-confetti": "^1.6.0",
     "degit": "^2.8.4",
+    "iklan-shopee": "^0.0.3",
     "kumpulan-tools": "^1.0.0",
     "kunci": "^1.5.2",
     "svelte-spa-router": "^3.3.0",

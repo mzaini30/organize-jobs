@@ -16,6 +16,9 @@ dependencies:
   degit:
     specifier: ^2.8.4
     version: 2.8.4
+  iklan-shopee:
+    specifier: ^0.0.3
+    version: 0.0.3
   kumpulan-tools:
     specifier: ^1.0.0
     version: 1.0.0
@@ -1104,6 +1107,10 @@ packages:
   /ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
+    dev: false
+
+  /iklan-shopee@0.0.3:
+    resolution: {integrity: sha512-61mSSHtAtIjNVGgmm6iG6PtQ6K37BdyPnCkf4zZRxhuAlceDP7Lm0/tven+1xhebjJhOENBRG431RrUs2Iipvg==}
     dev: false
 
   /internal-slot@1.0.3:
