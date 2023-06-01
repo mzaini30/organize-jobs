@@ -27,5 +27,5 @@
 
 <div class="">
   <Router {routes} />
-  <Iklan></Iklan>
+  <!-- <Iklan></Iklan> -->
 </div>
